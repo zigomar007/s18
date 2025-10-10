@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Extraction d'images</title>
+</head>
+<body>
+<input type="text" id="pageUrl" placeholder="Entrez l'URL de la page">
+<button id="fetchImages">Récupérer les images</button>
+<div id="results"></div>
+
+<script>
+document.getElementById('fetchImages').addEventListener('click', async () => {
+    const url = document.getElementById('pageUrl').value;
+    try {
+        const res = await fetch(url);
+        const html = await res.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const images = doc.querySelectorAll('img');
+        
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = '';
+        images.forEach(img => {
+            const src = img.src;
+            const imgEl = document.createElement('img');
+            imgEl.src = src;
+            imgEl.style.maxWidth = '200px';
+            imgEl.style.margin = '5px';
+            resultsDiv.appendChild(imgEl);
+        });
+    } catch (err) {
+        alert("Impossible de récupérer les images (CORS ou autre erreur).");
+        console.error(err);
+    }
+});
+</script>
+<a href="./index.html">Home</a><br/><br/>
+</body>
+</html>

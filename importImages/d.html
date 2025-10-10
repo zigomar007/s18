@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Test Proxy Images</title>
+<style>
+  body { font-family: sans-serif; padding: 20px; }
+  img { max-width: 200px; margin: 10px; }
+</style>
+</head>
+<body>
+<h1>Images via Proxy</h1>
+<input id="url" type="text" placeholder="URL cible" size="50">
+<button id="fetchBtn">Récupérer</button>
+<div id="images"></div>
+
+<script>
+document.getElementById('fetchBtn').addEventListener('click', async () => {
+  const targetUrl = document.getElementById('url').value;
+  if (!targetUrl) return alert("Indique une URL");
+
+  try {
+    const proxyUrl = `http://localhost:3000/proxy?url=${encodeURIComponent(targetUrl)}`;
+    const response = await fetch(proxyUrl);
+    const html = await response.text();
+
+    // Extraire les images avec une regex simple
+    const imgUrls = [...html.matchAll(/<img[^>]+src="([^">]+)"/g)].map(m => m[1]);
+
+    const container = document.getElementById('images');
+    container.innerHTML = "";
+    imgUrls.forEach(src => {
+      const img = document.createElement('img');
+      // Si l'URL est relative, on la complète
+      if (!src.startsWith('http')) {
+        const base = new URL(targetUrl);
+        src = base.origin + (src.startsWith('/') ? src : '/' + src);
+      }
+      img.src = src;
+      container.appendChild(img);
+    });
+  } catch (err) {
+    alert("Erreur : " + err.message);
+  }
+});
+</script>
+<a href="./index.html">Home</a><br/><br/>
+</body>
+</html>
