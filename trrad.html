@@ -61,7 +61,35 @@
   <span class="quote" id="author"></span>
 
   <!-- Script citation -->
-  <script>
+  
+
+  <!-- Script Google Translate + forçage en anglais -->
+ <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'fr',
+      includedLanguages: 'en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  function forceTranslationToEnglish() {
+    const interval = setInterval(() => {
+      const select = document.querySelector("select.goog-te-combo");
+      if (select) {
+        select.value = 'en';
+        select.dispatchEvent(new Event('change'));
+        clearInterval(interval);
+      }
+    }, 500); // essaie toutes les 500ms
+  }
+
+  window.addEventListener('load', () => {
+    forceTranslationToEnglish();
+  });
+</script>
+<script>
     const quoteEl = document.getElementById("quote");
     const authorEl = document.getElementById("author");
 
@@ -81,27 +109,6 @@
     }
 
     getQuote();
-  </script>
-
-  <!-- Script Google Translate + forçage en anglais -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'fr',
-        includedLanguages: 'en',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-
-    window.onload = function () {
-      setTimeout(function () {
-        var select = document.querySelector("select.goog-te-combo");
-        if (select) {
-          select.value = 'en'; // Forcer en anglais
-          select.dispatchEvent(new Event('change'));
-        }
-      }, 1000);
-    };
   </script>
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
