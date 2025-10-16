@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Export</title>
@@ -40,7 +40,7 @@
       content: "”";
     }
 
-    /* Masquer les éléments de Google Translate */
+    /* Cacher l'interface de Google Translate */
     .VIpgJd-ZVi9od-ORHb-OEVmcd,
     .goog-logo-link,
     #google_translate_element,
@@ -54,13 +54,13 @@
   </style>
 </head>
 <body>
-
-  <!-- Google Translate (invisible) -->
-  <div id="google_translate_element" style="display:none;"></div>
   <q><span id="quote">Chargement...</span></q><br/><br/>
   <span class="quote" id="author"></span>
 
-  <!-- Script citation -->
+  <!-- Élément requis pour Google Translate -->
+  <div id="google_translate_element" style="display: none;"></div>
+
+  <!-- Script pour afficher une citation -->
   <script>
     const quoteEl = document.getElementById("quote");
     const authorEl = document.getElementById("author");
@@ -82,32 +82,35 @@
 
     getQuote();
   </script>
-  <!-- Script Google Translate + forçage en anglais -->
- <script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'fr',
-      includedLanguages: 'en',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
 
-  function forceTranslationToEnglish() {
-    const interval = setInterval(() => {
-      const select = document.querySelector("select.goog-te-combo");
-      if (select) {
-        select.value = 'en';
-        select.dispatchEvent(new Event('change'));
-        clearInterval(interval);
-      }
-    }, 500); // essaie toutes les 500ms
-  }
+  <!-- Initialisation de Google Translate -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'fr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
 
-  window.addEventListener('load', () => {
-    forceTranslationToEnglish();
-  });
-</script>
+    function forceTranslationToFrench() {
+      const interval = setInterval(() => {
+        const select = document.querySelector("select.goog-te-combo");
+        if (select) {
+          select.value = 'fr';
+          select.dispatchEvent(new Event('change'));
+          clearInterval(interval);
+        }
+      }, 500); // Vérifie toutes les 500ms jusqu'à ce que le select existe
+    }
+
+    window.addEventListener('load', () => {
+      forceTranslationToFrench();
+    });
+  </script>
+
+  <!-- Script Google Translate -->
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
