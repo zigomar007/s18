@@ -61,8 +61,27 @@
   <span class="quote" id="author"></span>
 
   <!-- Script citation -->
-  
+  <script>
+    const quoteEl = document.getElementById("quote");
+    const authorEl = document.getElementById("author");
 
+    const apiURL = "https://api.quotable.io/random";
+
+    async function getQuote() {
+      try {
+        const response = await fetch(apiURL);
+        const data = await response.json();
+        quoteEl.innerText = data.content;
+        authorEl.innerText = data.author;
+      } catch (error) {
+        quoteEl.innerText = "Impossible de charger la citation.";
+        authorEl.innerText = "";
+        console.error("Erreur lors de la récupération de la citation :", error);
+      }
+    }
+
+    getQuote();
+  </script>
   <!-- Script Google Translate + forçage en anglais -->
  <script type="text/javascript">
   function googleTranslateElementInit() {
@@ -89,27 +108,6 @@
     forceTranslationToEnglish();
   });
 </script>
-<script>
-    const quoteEl = document.getElementById("quote");
-    const authorEl = document.getElementById("author");
-
-    const apiURL = "https://api.quotable.io/random";
-
-    async function getQuote() {
-      try {
-        const response = await fetch(apiURL);
-        const data = await response.json();
-        quoteEl.innerText = data.content;
-        authorEl.innerText = data.author;
-      } catch (error) {
-        quoteEl.innerText = "Impossible de charger la citation.";
-        authorEl.innerText = "";
-        console.error("Erreur lors de la récupération de la citation :", error);
-      }
-    }
-
-    getQuote();
-  </script>
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
