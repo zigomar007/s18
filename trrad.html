@@ -1,89 +1,108 @@
 <!DOCTYPE html>
-<html><head>
-<title>export</title>
-<link rel="stylesheet" href="all.min.css"/>
-<style>
-html {background-color: #e76f51;}
-body{
-overflow:hidden;
-height :74%;
-background-color: #e76f51;
-}
-object {
-background-color:#e76f51;
-height :200px;
-font-size: 18px;
-font-weight: bolder;display: inline;
-}
-.quote {
-  font-size: 22px;
-  font-weight: 600;
-}
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Export</title>
+  <link rel="stylesheet" href="all.min.css" />
+  <style>
+    html, body {
+      background-color: #e76f51;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
 
+    .quote {
+      font-size: 22px;
+      font-weight: 600;
+    }
 
-        .VIpgJd-ZVi9od-ORHb-OEVmcd  {
-            display: none !important;
-        } 
-         .goog-logo-link {
-            display:none !important;
-        }
+    #author {
+      color: purple;
+    }
 
-		#google_translate_element,.skiptranslate{display:none;}
-		body{top:0!important;}
-blockquote::before {
-  content: "“";
-  /* Further styling for the opening quote */
-}
+    #quote {
+      color: plum;
+      font-size: 24px;
+      font-weight: 600;
+    }
 
-blockquote::after {
-  content: "”";
-  /* Further styling for the closing quote */
-}		
-q {
-  quotes: "“" "”" "‘" "’"; /* Defines primary and secondary quotation marks */
- font-size: 24px;
-  font-weight: 600;
-}
-#author {color: purple;}
-#quote {color: plum;}
-		</style>
-</head> 
+    q {
+      quotes: "“" "”" "‘" "’";
+    }
+
+    blockquote::before {
+      content: "“";
+    }
+
+    blockquote::after {
+      content: "”";
+    }
+
+    /* Masquer les éléments de Google Translate */
+    .VIpgJd-ZVi9od-ORHb-OEVmcd,
+    .goog-logo-link,
+    #google_translate_element,
+    .skiptranslate {
+      display: none !important;
+    }
+
+    body {
+      top: 0 !important;
+    }
+  </style>
+</head>
 <body>
-<q><span id="google_translate_element" id="quote"> </span></q><br/><br/>
-<span class="quote" id="author"> </span>
- <script>
-const quoteEl = document.getElementById("quote");
-const authorEl = document.getElementById("author");
 
-const apiURL = "https://api.quotable.io/random";
+  <!-- Google Translate (invisible) -->
+  <div id="google_translate_element" style="display:none;"></div>
+  <q><span id="quote">Chargement...</span></q><br/><br/>
+  <span class="quote" id="author"></span>
 
-async function getQuote() {
-
-    
-    const response = await fetch(apiURL);
-    const data = await response.json();
-    const quoteContent = data.content;
-    const quoteAuthor = data.author;
-    quoteEl.innerText = quoteContent;
-    authorEl.innerText = quoteAuthor;
-}
-
-getQuote();
-
-document.write = getQuote;</script>
+  <!-- Script citation -->
   <script>
+    const quoteEl = document.getElementById("quote");
+    const authorEl = document.getElementById("author");
+
+    const apiURL = "https://api.quotable.io/random";
+
+    async function getQuote() {
+      try {
+        const response = await fetch(apiURL);
+        const data = await response.json();
+        quoteEl.innerText = data.content;
+        authorEl.innerText = data.author;
+      } catch (error) {
+        quoteEl.innerText = "Impossible de charger la citation.";
+        authorEl.innerText = "";
+        console.error("Erreur lors de la récupération de la citation :", error);
+      }
+    }
+
+    getQuote();
+  </script>
+
+  <!-- Script Google Translate + forçage en anglais -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'fr',
+        includedLanguages: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+
     window.onload = function () {
-      // Délai pour laisser Google Translate se charger
       setTimeout(function () {
-        // Forcer la traduction en anglais
         var select = document.querySelector("select.goog-te-combo");
         if (select) {
-          select.value = 'en';  // Code langue : en = anglais
+          select.value = 'en'; // Forcer en anglais
           select.dispatchEvent(new Event('change'));
         }
-      }, 1000); // 1 seconde de délai, ajuste si nécessaire
+      }, 1000);
     };
   </script>
- 
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body></html>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
