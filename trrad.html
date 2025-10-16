@@ -1,63 +1,89 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Auto-Translation</title>
-  <style>
-    #google_translate_element {
-     display: none;
-    }
-	#:1.container {
-     display: none;
-    }
-	.VIpgJd-ZVi9od-ORHb {
-     display: none;
-    }
-	  .skiptranslate {
-     display: none;
-    }
-  </style>
-</head>
+<!DOCTYPE html>
+<html><head>
+<title>export</title>
+<link rel="stylesheet" href="all.min.css"/>
+<style>
+html {background-color: #e76f51;}
+body{
+overflow:hidden;
+height :74%;
+background-color: #e76f51;
+}
+object {
+background-color:#e76f51;
+height :200px;
+font-size: 18px;
+font-weight: bolder;display: inline;
+}
+.quote {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+
+        .VIpgJd-ZVi9od-ORHb-OEVmcd  {
+            display: none !important;
+        } 
+         .goog-logo-link {
+            display:none !important;
+        }
+
+		#google_translate_element,.skiptranslate{display:none;}
+		body{top:0!important;}
+blockquote::before {
+  content: "“";
+  /* Further styling for the opening quote */
+}
+
+blockquote::after {
+  content: "”";
+  /* Further styling for the closing quote */
+}		
+q {
+  quotes: "“" "”" "‘" "’"; /* Defines primary and secondary quotation marks */
+ font-size: 24px;
+  font-weight: 600;
+}
+#author {color: purple;}
+#quote {color: plum;}
+		</style>
+</head> 
 <body>
+<q><span id="google_translate_element" id="quote"> </span></q><br/><br/>
+<span class="quote" id="author"> </span>
+ <script>
+const quoteEl = document.getElementById("quote");
+const authorEl = document.getElementById("author");
 
-  <h1>Hello</h1>
-  <p>This page is originally in English.</p>
+const apiURL = "https://api.quotable.io/random";
 
-  <!-- Widget (même si caché, il est nécessaire) -->
-  <div id="google_translate_element" style="visibility:hidden"></div>
+async function getQuote() {
 
-  <!-- Initialisation de Google Translate -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'fr', // Seulement français ici
-        autoDisplay: false
-      }, 'google_translate_element');
-    }
-  </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    const response = await fetch(apiURL);
+    const data = await response.json();
+    const quoteContent = data.content;
+    const quoteAuthor = data.author;
+    quoteEl.innerText = quoteContent;
+    authorEl.innerText = quoteAuthor;
+}
 
-  <!-- Script pour forcer la traduction à l'ouverture -->
+getQuote();
+
+document.write = getQuote;</script>
   <script>
     window.onload = function () {
-      // Attendre que le menu de Google Translate soit chargé
+      // Délai pour laisser Google Translate se charger
       setTimeout(function () {
-        const combo = document.querySelector("select.goog-te-combo");
-        if (combo) {
-          combo.value = 'fr'; // Forcer la langue en français
-          combo.dispatchEvent(new Event('change'));
+        // Forcer la traduction en anglais
+        var select = document.querySelector("select.goog-te-combo");
+        if (select) {
+          select.value = 'en';  // Code langue : en = anglais
+          select.dispatchEvent(new Event('change'));
         }
-      }, 1000); // délai pour s'assurer que le widget est prêt
+      }, 1000); // 1 seconde de délai, ajuste si nécessaire
     };
   </script>
-
-</body>
-
-</html>
-
-
-
-
-
-
+ 
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body></html>
