@@ -32,16 +32,16 @@ font-weight: bolder;display: inline;
 		#google_translate_element,.skiptranslate{display:none;}
 		body{top:0!important;}
 blockquote::before {
-  content: "ì";
+  content: "‚Äú";
   /* Further styling for the opening quote */
 }
 
 blockquote::after {
-  content: "î";
+  content: "‚Äù";
   /* Further styling for the closing quote */
 }		
 q {
-  quotes: "ì" "î" "ë" "í"; /* Defines primary and secondary quotation marks */
+  quotes: "‚Äú" "‚Äù" "‚Äò" "‚Äô"; /* Defines primary and secondary quotation marks */
  font-size: 24px;
   font-weight: 600;
 }
@@ -53,7 +53,7 @@ q {
 
 <q><span id="quote"> </span></q><br/><br/>
 <span class="quote" id="author"> </span>
-<script src="../js/citation.js"></script>
+<script src="js/citation.js"></script>
 
  <div id="google_translate_element" style="visibility:hidden"></div>
 
@@ -62,24 +62,24 @@ q {
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
-        includedLanguages: 'fr', // Seulement franÁais ici
+        includedLanguages: 'fr', // Seulement fran√ßais ici
         autoDisplay: false
       }, 'google_translate_element');
     }
   </script>
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  <!-- Script pour forcer la traduction ‡ l'ouverture -->
+  <!-- Script pour forcer la traduction √† l'ouverture -->
   <script>
     window.onload = function () {
-      // Attendre que le menu de Google Translate soit chargÈ
+      // Attendre que le menu de Google Translate soit charg√©
       setTimeout(function () {
         const combo = document.querySelector("select.goog-te-combo");
         if (combo) {
-          combo.value = 'fr'; // Forcer la langue en franÁais
+          combo.value = 'fr'; // Forcer la langue en fran√ßais
           combo.dispatchEvent(new Event('change'));
         }
-      }, 1000); // dÈlai pour s'assurer que le widget est prÍt
+      }, 1000); // d√©lai pour s'assurer que le widget est pr√™t
     };
   </script>
  <!-- 
@@ -110,4 +110,5 @@ function couvjour2() {
 </script>
 <script language="JavaScript">couvjour2();</script>-->
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body></html>
