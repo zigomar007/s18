@@ -1,0 +1,190 @@
+﻿/*
+<div class="infinity-indicator"><div class="in-progress"></div></div>
+
+#menu li{color:cyan;}
+
+<font class="oev"></font>
+<font class="aut"></font>
+<font class="perso"></font>
+<font class="cita"></font>
+<font class="CriCor"></font>
+<font class="ide"></font>
+*/
+.zigomar {
+    font-family: 'amazingruler-webfont';
+    color: orange;}
+.apple {}
+.blao {color: white;background-color: #8050ce;}
+.souto {border-bottom: 2px solid tomato ;}
+.souin {color: tomato ;}
+.fuc {color: fuchsia ;}
+.actor {color: fuchsia ;}
+.cheers {font-family: 'amazingruler-webfont';color: orange;}
+@counter-style grapes {
+    system: cyclic;
+    symbols: "\1F347";
+    suffix: " ";}   
+@counter-style musique {
+    system: cyclic;
+    symbols: "🎝";
+    suffix: " ";}
+@counter-style neb {
+    system: cyclic;
+    symbols: "📽";
+    suffix: " ";}
+@counter-style mram {
+    system: cyclic;
+    symbols: "\262a";
+    suffix: " ";}
+@counter-style aram {
+    system: cyclic;
+    symbols: "\1f3d8";
+    suffix: " ";}
+@counter-style musica {
+    system: cyclic;
+    symbols: "\1f3bc";
+    suffix: " ";}
+@counter-style femme {
+    system: cyclic;
+    symbols: "🌺";
+    suffix: " ";}
+#muz {list-style-type: musique;}
+#neb {list-style-type: neb;color: RGB(165,210,34);}
+#mram {list-style-type: mram;color: magenta;}
+#aram {list-style-type: aram;color: cyan;}
+#zliz {background-image: url("frr.jpg");padding: 20px;}
+.zliz {background-image: url("frr.jpg");padding: 20px;}
+.ggg {color:Aquamarine;background-color:SpringGreen;}
+.gggg {color:SpringGreen;background-color:DarkOrchid;}
+.ggggg {color:Aquamarine;background-color:Indigo;}
+.oev {color:pink;background-color:#33A2C6;}
+.franch {color:#33A2C6;background-color:fuchsia;}
+.ep {color:#33A2C6;background-color:pink;}
+.aut {color:Aquamarine;background-color:Indigo;}
+.autaut {color:Indigo;background-color:Aquamarine;}
+.peti {width: 24px;}
+.sep {width: 20%;height:2px;background-color:gold; }
+.noo {list-style:none;}
+#sbissal {list-style:url(../images/icon_flower.png);list-style-position: inside;}
+.sbissal {list-style:url(../images/icon_flower.png);list-style-position: inside;}
+ol {list-style-position: inside;}
+ol#menu li::marker {color: hotpink;}
+ol li:first-line{color:cyan;}
+.hotpinko li::marker {color: hotpink;}
+.perso {color:maroon;background-color:olive;font-family: Forte; }
+.cita {color: cyan;}
+.exp {color: tomato;}
+.dodg {color: DodgerBlue;background-color: ;}
+.CoB {color: CornflowerBlue;background-color: ;}
+.chrt {color: chartreuse;background-color: ;}
+.mar {color: maroon;background-color: ;}
+.Cri {color: Crimson;background-color: ;}
+.Cor {color: Coral;background-color: ;}
+.CriCoB {color: Crimson;background-color: CornflowerBlue;}
+.CriCor {color: chartreuse;background-color: CornflowerBlue;}
+.blep {color:pink;background-color:blue;}
+.blerp {color:black;background-color:cyan;}
+.blee {color:cyan;background-color:blue;}
+.blaa {color: ;background-color: blue;}
+.ree {color: blue;background-color:magenta;}
+.bleree {color: blue;background-color:;}
+.courto {color:magenta;background-color:blue;}
+.courton {color:gold;background-color:blue;}
+.doc {background: #fff8ed;}
+.docu {color:blue;background-color:gold;}
+.bd {color:;background-color:white;}
+.bad {color: white;background-color:red;}
+.bado {color: white;background-color:plum;}
+.rech {color: plum;background-color:;}
+.pinky {color:tomato;background-color:pink;}
+.gree {color:pink;background-color:green;}
+.bonbon {color:RGB(165,210,34); background-color: RGB(174,27,255);}
+.nobnob {color:RGB(174,27,255); background-color: RGB(165,210,34);}
+.caf {color:pink;background-color:brown;}
+.café {color:#F9B94B;background-color:RGB(150,81,48);}
+.bletravail {color:#F9B94B;background-color:darkBlue;}
+.encadré {padding: 6px;border: 2px solid gold;border-radius: 5px;
+background-image: url('motif.jpg');}
+.petencadré {padding: 6px;border: 2px solid gold;border-radius: 5px;
+background-image: url('motif.jpg');font-size:14px;}
+.calibre3 {
+color :cyan;
+font-size :bold;
+background-color:blue;}
+.scri {padding: 6px;border: 2px solid gold;border-radius: 5px;color: CornflowerBlue;
+font-family:Courier;font-size:12px;}
+#moincler {
+	margin: 20px;
+	text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #ae8964, 0 0 30px #ae8964, 0 0 40px white, 0 0 55px white, 0 0 75px white;}
+.css-1attflr {
+    max-width: 40rem;  
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right,cyan 0px, rgb(14, 210, 198) 18%, rgb(122, 59, 175), rgb(255, 63, 68))}
+.WikiaBar_menu_dropdown__content {
+    border-width: 5px;
+    border-style: solid;
+    border-color: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-image-source: linear-gradient(to right bottom, rgb(232, 233, 234) 10%, rgb(254, 147, 252) 25%, rgb(116, 213, 255) 50%, rgb(184, 93, 61) 70%, rgb(86, 86, 86) 85%);
+    border-image-slice: 1;
+	background-color: #4c4c4c;
+    color: #e6e6e6;}
+.blockquote {border: 2px solid gold;
+    border-radius: 5px;
+    background: #fff;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff)) 0 -6px;
+    background: -webkit-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 -6px;
+    background: -moz-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 -6px;
+    background: -ms-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 -6px;
+    background: -o-linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 -6px;
+    background: linear-gradient(top, #d9eaf3 0%, #fff 8%) 0 -6px;
+    -webkit-background-size: 100% 25px;
+    -moz-background-size: 100% 25px;
+    -ms-background-size: 100% 25px;
+    -o-background-size: 100% 25px;
+    background-size: 100% 25px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgb(0 0 0 / 7%);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 7%);
+	
+	padding: 1.5625em 0 1.5625em 2.618em;
+	padding: 0 1em 0 1em;
+	position: relative;
+    margin: 0 0 1.618em;
+    
+	
+	
+    quotes: "\201C" "\201D" "\2018" "\2019";
+    font-style: italic;
+	
+	
+    line-height: 1.5625;
+    margin-bottom: 1.5625em!important;
+	margin-bottom: 0.2em!important;
+	vertical-align: baseline;}
+/*
+.css-1attflr {
+    text-align: left;
+    margin: 0px auto;
+    max-width: 60rem;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-width: 0.125rem 0px 0px;
+    border-bottom-style: initial;
+    border-bottom-color: initial;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, rgb(14, 210, 198) 0px, rgb(14, 210, 198) 15%, rgb(122, 59, 175), rgb(255, 63, 68));
+    border-left-style: initial;
+    border-left-color: initial;
+    border-right-style: initial;
+    border-right-color: initial;
+    border-top-style: solid;
+    border-top-color: rgb(230, 25, 87);
+}
+border-image-source: linear-gradient(to right, plum 0px, gold 15%, tomato, chartreuse);

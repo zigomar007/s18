@@ -1,0 +1,25 @@
+.infinity-seperator{height:5px;background:#f3f3f3;margin-bottom:1em}.infinity-indicator{background-color:#8050ce!important;margin-bottom:0;margin-left:0!important;margin-right:0!important}.infinity-indicator>.in-progress{margin-top:0!important;background-color:#073759!important}
+
+.infinity-comments:hover{cursor:hand}.infinity-comments .load-text{text-align:center;width:100%;position:relative;display:block;top:.7em;color:#333}.infinity-comments .load-text:before{font-family:FontSided!important;content:'\e80d';display:inline-block;margin-right:8px}
+
+.infinity-indicator,.load-more-posts,.no-more-posts,.vh-load-more{background:#073759;color:#fff;cursor:pointer;display:block;margin:0 15px 15px;padding:25px;position:relative;text-align:center;text-transform:uppercase}.infinity-indicator:active,.infinity-indicator:focus,.infinity-indicator:hover,.load-more-posts:active,.load-more-posts:focus,.load-more-posts:hover,.no-more-posts:active,.no-more-posts:focus,.no-more-posts:hover,.vh-load-more:active,.vh-load-more:focus,.vh-load-more:hover{color:#fff}
+
+.infinity-indicator .in-progress,.load-more-posts .in-progress,.no-more-posts .in-progress,.vh-load-more .in-progress{
+	display:block;
+	margin-top:1px;
+	position:absolute;
+	width:0;
+	height:2px;
+	top:50%;
+	left:62%;/*50%*/
+	margin-left:-190px;
+	border-right:5px solid #fff;
+	background-color:rgba(255,255,255,.8);
+	box-shadow:0 0 10px rgba(255,255,255,.8);
+	animation:line 1s ease-out infinite}
+ 
+	 .infinity-indicator,.load-more-posts,.no-more-posts,.vh-load-more{margin-left:15px}
+
+	 .infinity-indicator,.load-more-posts,.no-more-posts,.vh-load-more{margin-bottom:2px}
+	 
+ @keyframes progress-bar-stripes{from{background-position:40px 0}to{background-position:0 0}}@keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}@keyframes fadeIn{from{visibility:hidden;opacity:0}to{visibility:visible;opacity:1}}@keyframes sk-scaleout{0%{transform:scale(0)}100%{transform:scale(1);opacity:0}}@keyframes zoomIn{from{opacity:0;transform:scale3d(.4,.4,.4)}50%{opacity:1}}@keyframes fadeOut{from{opacity:1}to{opacity:0}}@keyframes dash{0%{fill:transparent;stroke:#fff}80%{fill:transparent}90%{stroke-width:14}100%{fill:#fff!important;stroke:#fff;color:#fff;stroke-dashoffset:0;stroke-width:0}}@keyframes line{0%{width:0}100%{width:280px;opacity:0}}

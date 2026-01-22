@@ -1,0 +1,13 @@
+.typed-cursor { animation: 0.7s ease 0s infinite normal none running blink;}
+
+@keyframes blink { 
+  0% { color: transparent; }
+  50% { color: blue; }
+  100% { color: transparent; }
+}
+
+@-webkit-keyframes blink { 
+  0% { color: transparent; }
+  50% { color: blue; }
+  100% { color: transparent; }
+}

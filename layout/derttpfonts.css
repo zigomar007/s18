@@ -1,0 +1,86 @@
+﻿@font-face {
+  font-family: 'amazingruler-webfont';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./t_font/amazingruler-webfont.woff') format('woff');}
+@font-face {
+  font-family: 'HARNGTON';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./t_font/HARNGTON.ttf') format('truetype');
+ 
+}
+@font-face {
+  font-family: 'newyorkertypebold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./t_font/nyk/newyorkertypebold.otf') format('truetype');
+
+}
+@font-face {
+  font-family: 'newyorker1';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./t_font/nyk/Graphik-Medium.woff2') format('woff2');
+
+}
+@font-face {
+  font-family: 'newyorker2';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./t_font/nyk/Graphik-MediumItalic.woff2') format('woff2');
+  
+}
+@font-face {
+  font-family: 'newyorker3';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./t_font/nyk/IrvinHeadingWeb-Regular.woff') format('woff');
+  
+}
+@font-face {
+  font-family: 'newyorker4';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./t_font/nyk/TNYAdobeCaslonPro-Regular.woff2') format('woff2');
+ 
+}
+@font-face {
+  font-family: 'newyorker5';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./t_font/nyk/IrvinText-Regular.woff') format('woff');
+ 
+}
+
+
+
+
+
+@font-face {
+  font-family: 'sf-ui-display';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./t_font/sf-ui-display-medium-webfont.ttf') format('truetype');
+ 
+}
+
+
+
+
+
+@font-face {
+	font-family:'rekrq';font-weight: 400;
+	src: url('./t_font/rekrq.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cairo-B';
+  
+  src: url('./t_font/ArbFONTS-Cairo-Bold-3.ttf') format('truetype');
+  
+}
+@font-face {
+	font-family:'Al-Jazeera-Bold';font-weight: 400;
+	src: url('./t_font/Al-Jazeera-Bold.3301c4f5.woff2') format('woff2');
+}

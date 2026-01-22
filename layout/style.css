@@ -1,0 +1,45 @@
+﻿body { font-family: ''; direction:; unicode-bidi: embed; background: url(../images/jolicoin.jpg) no-repeat center fixed; -webkit-background-size: cover; background-color: purple; }::selection { background-color: RGB(165,210,34); color: RGB(174,27,255); }
+#cont{font-family: ; width:90%; margin: auto; background-color: #916DAE; border-radius: 8px; padding: 8px; direction: ltr;letter-spacing: 0px;}
+pre{ white-space:pre-line;line-height:24px; font-family: ""; font-size: x-large;font-weight:; background-color: #8050ce; color: #000; padding: 8px;}
+.fr {direction: ltr;}
+.ar {direction: rtl;}
+.entrep{ width: 60%; border-radius: 6px; border: 8px solid RGB(137,75,171); margin: auto; padding: 20px; font-size: 16px;background-color: RGB(128,40,167);color: RGB(255,255,255);}
+.exempl { background-color: magenta; }
+ #light { background-color: lightBlue; color: purple; padding: 8px;}
+ #med { background-color: purple; color: lightBlue; padding: 8px;}
+ table,tr,td{ border: solid 2px;}
+ table{ width: 100%;}
+ a {color: green; text-decoration: none;}
+ a:link {font-weight: bold; text-decoration: none; color: purple;}
+ a:visited {font-weight: bold; text-decoration: none; color: tomato;}
+ a:hover, a:active {text-decoration: underline; color: #3B6132;}
+ .imag {border: #d0d0d0 solid 1px; padding: 1%; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); width:250PX;}
+ .imag0 {margin: 8px 10%;border: #d0d0d0 solid 1px; padding: 1%;box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); width:80%;}
+ .imag1 {margin: 8px 25%;border: #d0d0d0 solid 1px; padding: 1%;box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); width:50%;}
+ #imag1 {margin: 8px 25%;border: #d0d0d0 solid 1px; padding: 1%;box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); width:50%;height:320px;}
+ .imag2 {border: #d0d0d0 solid 1px; padding: 1%;box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); width:30%;}
+ .imag3 {border: #d0d0d0 solid 1px; padding: 1%;box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); width:30%;}
+ .imag4 {border: #d0d0d0 solid 1px;padding: 1%;box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); width:22%;}
+ h1 {font-family:;font-size:44px;line-height:48px;}
+ h2 {color: pink; background-color: purple; display: inline-block;font-family:'HARNGTON';}
+ h2:hover{font-family:;}
+ h3 {font-weight: bold; color: pink; background-color: ; display: inline;}
+ h5,h4  {color: #96A0AC;background-color: pink; display: inline;}
+ h6 {color: red;background-color: white; font-weight: bolder; display: inline;}
+ h4:hover{font-family:;}
+.title { background: url('../images/flowers.gif'); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+ .xmpl {width:97%;padding: 6px; border-radius: 6px; border: 8px double RGB(140,51,187); font-size: 22px; font-weight: bold; background-color: plum; }
+ table { border: solid magenta 2px; }
+ td { border: solid cyan 2px; }
+figcaption {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: bold;
+    margin: 0px 25% 0px;
+    color: #787F82;
+}
+i {color: plum;
+	font-family: 'newyorker2';
+}
+/*
+.imag {margin: 8px 25%;}
